@@ -105,9 +105,10 @@ async def login(user: UserAuth):
 
 
 @app.get("/protected")
-async def protected_route(username: str = Depends(verify_token)):
-    logger.info(f"Protected route accessed by: {username}")
+async def protected_route(token_data: str = Depends(verify_token)):
+    # use token_data instead of username
+    logger.info(f"Protected route accessed by: {token_data}")
     return {
-        "message": f"Hello {username}, you are authenticated!",
-        "username": username
+        "message": f"Hello {token_data}, you are authenticated!",
+        "username": token_data
     }
