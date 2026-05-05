@@ -38,8 +38,6 @@ Install dependencies: pip install -r requirements.txt.
 
 Run the server: uvicorn main:app --reload.
 
-Access API documentation at http://127.0.0.1:8000/docs.
-
 Frontend
 Navigate to the /frontend directory.
 
