@@ -51,6 +51,7 @@ This project provided a deep dive into the integration of a Python-based backend
 
 <img width="668" height="788" alt="image" src="https://github.com/user-attachments/assets/34a4d1e8-9676-42dc-ba2c-dd5f324833f3" />
 
+
 <img width="913" height="331" alt="image" src="https://github.com/user-attachments/assets/a2f3733d-0939-4e9b-bd00-49ae4faf7aad" />
 
 
