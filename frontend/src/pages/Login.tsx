@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import type { AxiosError } from "axios";
-import client from "../api/client"; // This is what you actually use in submit()
-import type { ApiError, AuthPayload, TokenResponse } from "../types"; // These are your correct types
+import client from "../api/client";
+import type { ApiError, AuthPayload, TokenResponse } from "../types";
+import { Lock, Loader2 } from "lucide-react"; // Matching the icon style
 
 export default function Login() {
-  // ... rest of your code stays the same{
   const navigate = useNavigate();
   const [form, setForm] = useState<AuthPayload>({ username: "", password: "" });
   const [loading, setLoading] = useState<boolean>(false);
@@ -28,54 +28,61 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen grid place-items-center bg-slate-100 px-4">
-      <div className="w-full max-w-sm bg-white shadow rounded-2xl p-6">
-        <h1 className="text-xl font-semibold">Login</h1>
+    <div className="min-h-screen flex items-center justify-center p-4 bg-[#F8FAFC]">
+      <div className="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-purple-100/40 w-full max-w-md border border-white">
+        <div className="text-center mb-8">
+          <div className="inline-block p-4 bg-purple-50 text-purple-500 rounded-2xl mb-4">
+            <Lock size={28} />
+          </div>
+          <h2 className="text-3xl font-bold text-slate-800">Welcome Back</h2>
+          <p className="text-slate-400 mt-2">Log in to Chantel's Checklist</p>
+        </div>
 
         {error && (
-          <div className="mt-4 text-sm rounded-lg border border-red-200 bg-red-50 text-red-700 px-3 py-2">
+          <div className="mb-6 text-sm rounded-2xl border border-red-100 bg-red-50 text-red-500 px-4 py-3 text-center font-medium">
             {error}
           </div>
         )}
 
-        <form onSubmit={submit} className="mt-5 space-y-3">
-          <label className="block">
-            <span className="text-sm text-slate-700">Username</span>
+        <form onSubmit={submit} className="space-y-5">
+          <div>
             <input
-              className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              type="text"
+              placeholder="Username"
+              className="w-full px-5 py-4 bg-slate-50 rounded-2xl focus:ring-2 focus:ring-purple-200 outline-none transition-all text-slate-700"
               value={form.username}
               onChange={(e) =>
                 setForm((prev: AuthPayload) => ({ ...prev, username: e.target.value }))
               }
               required
             />
-          </label>
+          </div>
 
-          <label className="block">
-            <span className="text-sm text-slate-700">Password</span>
+          <div>
             <input
               type="password"
-              className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              placeholder="Password"
+              className="w-full px-5 py-4 bg-slate-50 rounded-2xl focus:ring-2 focus:ring-purple-200 outline-none transition-all text-slate-700"
               value={form.password}
               onChange={(e) =>
                 setForm((prev: AuthPayload) => ({ ...prev, password: e.target.value }))
               }
               required
             />
-          </label>
+          </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-lg bg-indigo-600 text-white py-2 text-sm font-medium hover:bg-indigo-700 disabled:opacity-60"
+            className="w-full py-4 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-bold rounded-2xl transition-all shadow-lg shadow-purple-100 flex items-center justify-center"
           >
-            {loading ? "Signing in..." : "Sign in"}
+            {loading ? <Loader2 className="animate-spin" /> : "Sign In"}
           </button>
         </form>
 
-        <p className="mt-4 text-sm text-slate-600">
+        <p className="mt-8 text-center text-slate-500 text-sm font-medium">
           Need an account?{" "}
-          <Link to="/register" className="text-indigo-600 hover:underline">
+          <Link to="/register" className="text-purple-600 font-bold hover:underline ml-1">
             Register
           </Link>
         </p>
