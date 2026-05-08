@@ -47,9 +47,9 @@ Start the application: npm start.
 
 Final Reflections
 This project provided a deep dive into the integration of a Python-based backend with a strictly typed React frontend. It allowed me to practicalize concepts of data security, API design, and version control management.
-<img width="771" height="629" alt="image" src="https://github.com/user-attachments/assets/227572e4-afde-4305-9e71-f45338ff26f8" />
+<img width="668" height="788" alt="image" src="https://github.com/user-attachments/assets/20699a3f-563c-4e2a-9e4c-4aab2409cb3c" />
 
-<img width="945" height="337" alt="image" src="https://github.com/user-attachments/assets/09c3f1f4-46de-44ec-bb96-ab7149dcdd23" />
+<img width="707" height="725" alt="image" src="https://github.com/user-attachments/assets/34a4d1e8-9676-42dc-ba2c-dd5f324833f3" />
 
 
 
