@@ -49,8 +49,9 @@ Final Reflections
 This project provided a deep dive into the integration of a Python-based backend with a strictly typed React frontend. It allowed me to practicalize concepts of data security, API design, and version control management.
 <img width="668" height="788" alt="image" src="https://github.com/user-attachments/assets/20699a3f-563c-4e2a-9e4c-4aab2409cb3c" />
 
-<img width="707" height="725" alt="image" src="https://github.com/user-attachments/assets/34a4d1e8-9676-42dc-ba2c-dd5f324833f3" />
+<img width="50" height="60" alt="image" src="https://github.com/user-attachments/assets/34a4d1e8-9676-42dc-ba2c-dd5f324833f3" />
 
+<img width="913" height="331" alt="image" src="https://github.com/user-attachments/assets/a2f3733d-0939-4e9b-bd00-49ae4faf7aad" />
 
 
 
